@@ -1,0 +1,69 @@
+<!--Anthony Owen
+    CSC102  
+    week 4
+    Assignment 4.2 incorporate audio
+    ui changes = added 2 ways to play audio on the page. changed button background to aqua, added radius to buttons, 
+     -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="strings-2.css">
+    <script src = "function string().js"></script>
+</head>
+<script>alert("enter string, first/last name, zipcode for verification")</script>
+    <p>
+<h1> Welcome to Silly Strings </h1>
+    </p>
+    <!--adds an audio controller with music subsource aud!o/basicdub.mp3-->
+    <audio controls>
+        <source src = "aud!o/basicdub.mp3"></audio>
+    </audio>
+<div>
+    <!--adds lets listen button-->
+    <button onclick="letsListen();">lets listen</button>
+    <!--adds im done button-->
+    <button onclick="okEnough()";>im done</button>
+</div>
+<body>
+    <!--inputs a form with single input for a string -->
+    <form id = "inputForm" onsubmit = " return false " >
+        <!--creates input box-->
+        enter your string : <input type = "text" id = "firstInput"/>
+        <!--creates a button to check for palindrome-->
+            <input type = "submit" onclick = "strings();"/>
+        <p id= "stringStatus">Is this a Palindrome?</p>
+    </form>
+
+    <br>
+    <!--inputs form-->
+    <form id = "inputForm2" onsubmit = " return false " >
+        <!--inputs first name input box-->
+        first name : <input type = "text" id = "firstName"/>
+        <!--inputs last name input box-->
+        last name : <input type="text" id = "lastName" />
+        <br>
+        <!--inputs button for clicking to verify name-->
+            <input type = "submit" onclick = "verifyname();"/>
+        <!--inputs a paragraph location to have an output for when name is verified-->
+            <p id = "nameStatus"> name verified?</p>
+        <!--inputs a number input for zipcode-->
+        zipcode : <input type="number" id= "zipcode" />
+        <!--inputs a button to click when verifying zipcode-->
+            <input type = "submit" onclick = "verifyzipcode();"/>
+        <!--inputs a paragraph function for outputing zipcode verification-->
+            <p id= "zipcodeStatus"> zipcode accepted? </p>  
+    </form>
+        
+        
+        <!--add's silly string image -->
+        <img id="memeimage" src="sillystring.png.webp" />
+
+       
+</body>
+<!--adds footer bg color blue, font color black, font size xl, cursor becomes crosshair-->
+<footer>Enter as Many Strings as You'd Like!</footer>
+</html>
